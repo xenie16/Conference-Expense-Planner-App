@@ -1,36 +1,45 @@
 import Navbar from "./Navbar";
 import SelectionCard from "./SelectionCard";
+import Meals from "./Meals";
+
+
 function ProductPage() {
+
    const venues = [
       {
          id: 1,
          name: "Auditorium Hall",
          capacity: 200,
-         price: 5500
+         price: 5500,
+         img: "/auditorium_hall.jpg"
       },
       {
          id: 2,
          name: "Conference Room",
          capacity: 15,
-         price: 3500
+         price: 3500,
+         img: '/conference_room.jpg'
       },
       {
          id: 3,
          name: "Presentation Room",
          capacity: 50,
-         price: 7000
+         price: 7000,
+         img: '/presentation_room.jpg'
       },
       {
          id: 4,
          name: "Large Meeting Room",
          capacity: 10,
-         price: 1100
+         price: 1100,
+         img: '/large_meeting_room.jpg'
       },
       {
          id: 5,
          name: "Small Meeting Room",
          capacity: 6,
-         price: 900
+         price: 900,
+         img: '/small_meeting_room.jpg'
       }
    ]
 
@@ -38,38 +47,73 @@ function ProductPage() {
       {
          id: 1,
          name: "Speakers",
-         price: 35
+         price: 35,
+         img: '/speaker.jpg'
       },
       {
          id: 2,
          name: "Microphones",
-         price: 45
+         price: 45,
+         img: '/microphone.jpg'
       },
       {
          id: 3,
          name: "Whiteboards",
-         price: 80
+         price: 80,
+         img: '/whiteboard.jpg'
       },
       {
          id: 4,
          name: "Projectors",
-         price: 200
+         price: 200,
+         img: '/projector.jpg'
       },
       {
          id: 5,
          name: "Signage",
-         price: 80
+         price: 80,
+         img: '/signage.jpg'
       }
    ]
+
+   const mealOptions = [
+      {
+         id: 1,
+         name: "Breakfast",
+         price: 50,
+         img: '/breakfast.jpg'
+      },
+      {
+         id: 2,
+         name: "High Tea",
+         price: 100,
+         img: '/high_tea.jpg'
+      },
+      {
+         id: 3,
+         name: "Lunch",
+         price: 100,
+         img: '/lunch.jpg'
+      },
+      {
+         id: 4,
+         name: "Dinner",
+         price: 150,
+         img: '/dinner.webp'
+      },
+   ]
+
    return (
      <>
+         <Navbar />
          {venues.map((venue) => (
-            <SelectionCard key={venue.id} img="" title={venue.name} capacity={venue.capacity} price={venue.price} />
+            <SelectionCard key={venue.id} img={venue.img} title={venue.name} capacity={venue.capacity} price={venue.price} />
          ))}
 
          {addOns.map((addOn) => (
-            <SelectionCard key={addOn.id} img="" title={addOn.name} price={addOn.price} />
+            <SelectionCard key={addOn.id} img={addOn.img} title={addOn.name} price={addOn.price} />
          ))}
+            <Meals mealOptions={mealOptions} />
      </>
    );
  }

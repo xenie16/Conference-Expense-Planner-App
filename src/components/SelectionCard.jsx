@@ -11,7 +11,7 @@ function SelectionCard({
          <img src={img}></img>
          <p>{title}</p>
          <p>{capacity}</p>
-         <p>{price}</p>
+         <p>€ {price}</p>
          <div>
             <button>-</button>
             <form>
