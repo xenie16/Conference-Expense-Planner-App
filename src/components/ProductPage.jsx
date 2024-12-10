@@ -34,7 +34,7 @@ function ProductPage() {
       }
    ]
 
-   const AddOns = [
+   const addOns = [
       {
          id: 1,
          name: "Speakers",
@@ -67,7 +67,7 @@ function ProductPage() {
             <SelectionCard key={venue.id} img="" title={venue.name} capacity={venue.capacity} price={venue.price} />
          ))}
 
-         {AddOns.map((addOn) => (
+         {addOns.map((addOn) => (
             <SelectionCard key={addOn.id} img="" title={addOn.name} price={addOn.price} />
          ))}
      </>
