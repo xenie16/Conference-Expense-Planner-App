@@ -2,9 +2,7 @@ import Navbar from "./Navbar";
 import SelectionCard from "./SelectionCard";
 import Meals from "./Meals";
 
-
 function ProductPage() {
-
    const venues = [
       {
          id: 1,
