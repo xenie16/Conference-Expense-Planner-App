@@ -107,14 +107,14 @@ function ProductPage() {
      <>
          <Navbar />
             <section>
-               <h1>Venue Room Selection</h1>
+               <h1 className="selection-title">Venue Room Selection</h1>
                <SelectionCard options={venues} />
             </section>
             <section>
-               <h1>Add-ons Selection</h1>
+               <h1 className="selection-title">Add-ons Selection</h1>
                <SelectionCard options={addOns} />
             </section>
-            <section>
+            <section className="selection-title">
                <h1>Meal Selection</h1>
                <Meals mealOptions={mealOptions} />
             </section>
