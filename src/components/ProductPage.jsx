@@ -86,26 +86,29 @@ function ProductPage() {
       {
          id: 2,
          name: "High Tea",
-         price: 100,
+         price: 25,
          img: '/high_tea.jpg'
       },
       {
          id: 3,
          name: "Lunch",
-         price: 100,
+         price: 65,
          img: '/lunch.jpg'
       },
       {
          id: 4,
          name: "Dinner",
-         price: 150,
+         price: 70,
          img: '/dinner.webp'
       },
    ]
 
    return (
      <>
-         <Navbar />
+         <header>
+            <Navbar />
+         </header>
+         <main>
             <section>
                <h1 className="selection-title">Venue Room Selection</h1>
                <SelectionCard options={venues} />
@@ -118,6 +121,7 @@ function ProductPage() {
                <h1>Meal Selection</h1>
                <Meals mealOptions={mealOptions} />
             </section>
+         </main>
      </>
    );
  }
