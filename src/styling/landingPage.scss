@@ -1,0 +1,27 @@
+.landing-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-image: url("C:/Users/haike/Desktop/delete/Conference Expense Planner App/public/background_img.jpg");
+  background-size: cover;
+  width: 100vw;
+  height: 100vh;
+
+  color: #fff;
+
+  &-title {
+    text-align: center;
+  }
+  &-button {
+    background-color: #cc6933;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+
+    &:hover {
+      background-color: #be5217;
+    }
+  }
+}
