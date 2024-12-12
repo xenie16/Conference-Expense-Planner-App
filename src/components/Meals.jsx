@@ -5,7 +5,6 @@ function Meals({
 }) {
    return (
       <>
-         <h1>Meals</h1>
          {mealOptions.map((option) => {
             return (
                <React.Fragment key={option.id}>

@@ -106,14 +106,18 @@ function ProductPage() {
    return (
      <>
          <Navbar />
-         {venues.map((venue) => (
-            <SelectionCard key={venue.id} img={venue.img} title={venue.name} capacity={venue.capacity} price={venue.price} />
-         ))}
-
-         {addOns.map((addOn) => (
-            <SelectionCard key={addOn.id} img={addOn.img} title={addOn.name} price={addOn.price} />
-         ))}
-            <Meals mealOptions={mealOptions} />
+            <section>
+               <h1>Venue Room Selection</h1>
+               <SelectionCard options={venues} />
+            </section>
+            <section>
+               <h1>Add-ons Selection</h1>
+               <SelectionCard options={addOns} />
+            </section>
+            <section>
+               <h1>Meal Selection</h1>
+               <Meals mealOptions={mealOptions} />
+            </section>
      </>
    );
  }
