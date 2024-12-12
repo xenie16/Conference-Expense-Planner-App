@@ -1,8 +1,4 @@
 .landing-page {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
   background-image: url("/background_img.jpg");
   background-size: cover;
   width: 100vw;
@@ -10,9 +6,29 @@
 
   color: #fff;
 
+  &-container {
+    display: flex;
+    gap: 80px;
+    justify-content: center;
+    align-items: center;
+    padding: 0 15%;
+    margin: 0 auto;
+    height: 100%;
+    background-color: hsla(0%, 0%, 0%, 0.6);
+  }
+
   &-title {
+    flex: 0 0 360px;
     text-align: center;
   }
+
+  &-description {
+    flex: 1 1 auto;
+    max-width: 500px;
+    text-align: center;
+    font-size: 1.05em;
+  }
+
   &-button {
     background-color: #cc6933;
     color: #fff;
