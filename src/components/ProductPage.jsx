@@ -118,6 +118,7 @@ function ProductPage() {
       addOns: 0,
       meals: 0
    });
+   const [numberOfPeople, setNumberOfPeople] = useState(0);
 
    const updateSectionTotals = (section, total) => {
       setSectionTotals(prev => ({
@@ -127,6 +128,12 @@ function ProductPage() {
    };
 
    const grandTotal = Object.values(sectionTotals).reduce((acc, total) => acc + total, 0);
+
+   const preventDefaultBehaviour = (e) => {
+      if (e.key === 'Enter') {
+         e.preventDefault();
+      }
+   };
 
    return (
      <>
@@ -154,12 +161,17 @@ function ProductPage() {
                <h1>{sections.meals.title}</h1>
                <form>
                   <label> Number of People: 
-                     <input type="number" />
+                     <input  
+                     type="number" 
+                     value={numberOfPeople} 
+                     onChange={e => setNumberOfPeople(e.target.value)}
+                     onKeyDown={preventDefaultBehaviour} />
                   </label>
                </form>
                <Meals 
                   mealOptions={sections.meals.options} 
                   onTotalChange={total => updateSectionTotals('meals', total)}
+                  numberOfPeople={numberOfPeople}
                />
                <TotalPrice total={sectionTotals.meals} />
             </section>
