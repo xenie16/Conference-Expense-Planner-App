@@ -1,12 +1,18 @@
 import React from "react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 function SelectionCard({
-   options
+   options,
+   onTotalChange
 }) {
    const [quantity, setQuantity] = useState(
       Object.fromEntries(options.map(option => [option.id, 0]))
    );
+
+   useEffect(() => {
+      const total = options.reduce((total, option) => total + option.price * quantity[option.id], 0);
+      onTotalChange(total);
+   }, [quantity, options, onTotalChange]);
 
    function handleIncrement(id) {
       setQuantity(prev => ({
