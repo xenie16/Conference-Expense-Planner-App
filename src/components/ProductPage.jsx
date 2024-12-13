@@ -152,6 +152,11 @@ function ProductPage() {
             </section>
             <section className="selection-title">
                <h1>{sections.meals.title}</h1>
+               <form>
+                  <label> Number of People: 
+                     <input type="number" />
+                  </label>
+               </form>
                <Meals 
                   mealOptions={sections.meals.options} 
                   onTotalChange={total => updateSectionTotals('meals', total)}
