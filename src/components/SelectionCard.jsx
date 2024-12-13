@@ -12,7 +12,7 @@ function SelectionCard({
    useEffect(() => {
       const total = options.reduce((total, option) => total + option.price * quantity[option.id], 0);
       onTotalChange(total);
-   }, [quantity, options, onTotalChange]);
+   }, [quantity]);
 
    function handleIncrement(id) {
       setQuantity(prev => ({
